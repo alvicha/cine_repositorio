@@ -1,0 +1,69 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserción de Película</title>
+</head>
+
+<body>
+    <main>
+        <h1>Gestión de Películas</h1>
+        <section>
+            <h2>Añadir Película</h2>
+            <form action="add_film.php" method="POST" enctype="multipart/form-data">
+                <div class="titulo">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <br>
+                <div class="director">
+                    <label for="director">Director:</label>
+                    <input type="text" id="director" name="director" required>
+                </div>
+                <br>
+                <div class="nota">
+                    <label for="nota">Nota:</label>
+                    <input type="text" id="nota" name="nota" required>
+                </div>
+                <br>
+                <div class="anyo">
+                    <label for="anyo">Año:</label>
+                    <input type="number" id="anyo" name="anyo" min="1800" max="2100" required>
+                </div>
+                <br>
+                <div class="presupuesto">
+                    <label for="presupuesto">Presupuesto:</label>
+                    <input type="number" id="presupuesto" name="presupuesto" required>
+                </div>
+                <br>
+                <div class="imagen">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png" required>
+                </div>
+                <br>
+                <div class="trailer">
+                    <label for="trailer">URL Trailer:</label>
+                    <input type="text" id="trailer" name="trailer" required>
+                </div>
+                <br>
+                <button class="anyadir" type="submit">Añadir</button>
+            </form>
+        </section>
+        <br> <br>
+        <section>
+            <h2>Borrar Película</h2>
+            <form action="delete_film.php" method="POST">
+                <label for="id">ID de la película:</label>
+                <input type="number" id="id" name="id" required>
+                <button type="submit">Borrar</button>
+            </form>
+        </section>
+        <br>
+        <a href="index.php">Volver a la lista de películas</a>
+    </main>
+</body>
+
+</html>
